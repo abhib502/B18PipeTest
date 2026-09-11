@@ -3,7 +3,8 @@ module "res" {
   rgs    = var.rgs
 }
 
-module "stg" {
-  source = "../../sub-environment/azurerm_storage_account"
-  stgs   = var.stgs
-}
+# module "stg" {
+#   depends_on = [module.res]
+#   source     = "../../sub-environment/azurerm_storage_account"
+#   stgs       = var.stgs
+# }
