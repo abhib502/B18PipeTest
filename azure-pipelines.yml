@@ -16,10 +16,6 @@ pr:
 pool:
   vmImage: TerraPipeTest
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 stages:
 - stage: Validate
   displayName: 'Terraform Validate'
