@@ -8,8 +8,7 @@ pr:
    include:
      - main
 
-pool:
-  vmImage: TerraPipeTest
+pool: TerraPipeTest
 
 stages:
 - stage: Validate
