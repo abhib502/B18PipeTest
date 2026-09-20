@@ -7,7 +7,7 @@ trigger:
 pool: TerraPipeTest
 
 stages:
-  - stage: Terraform Validate
+  - stage: TerraformValidate
     displayName: Validation of Terraform code
     jobs:
       - job: 
