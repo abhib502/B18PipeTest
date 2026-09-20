@@ -1,0 +1,19 @@
+trigger:
+  branches:
+    include:
+      - main
+
+
+pool: TerraPipeTest
+
+stages:
+  - stage: Terraform Validate
+    displayName: Validation of Terraform code
+    jobs:
+      - job: 
+        steps: 
+        - task: TerraformTask@5
+          inputs:
+            provider: 'azurerm'
+            command: 'validate'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/environments/dev'
