@@ -7,7 +7,6 @@ on:
       - feature/*
 
 jobs:
-  first_job:
     name: print hello
     runs-on: [self hosted, x64]
       shell: powershell
