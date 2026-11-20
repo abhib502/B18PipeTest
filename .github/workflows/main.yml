@@ -25,8 +25,13 @@ jobs:
       - name: Check Workspace
         shell: powershell
         run: |
+          Write-Host "Workspace: ${{ github.workspace }}"
           Write-Host "Current Directory:"
           Get-Location
+
+          Write-Host "Terraform files location:"
+          Get-ChildItem -Recurse -Filter "*.tf" |
+            Select-Object FullName
 
           Write-Host "Terraform Files:"
           Get-ChildItem "${{ github.workspace }}\environment\dev"
