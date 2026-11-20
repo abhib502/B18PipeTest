@@ -7,7 +7,11 @@ on:
       - feature/*
 
 jobs:
+  deploy:
     name: print hello
-    runs-on: [self hosted, x64]
-      shell: powershell
-        echo "Hello World!"
+    runs-on: [self-hosted, x64]
+    steps:
+      - name: Printing
+        shell: powershell
+        run: |
+          echo "Hello World!"
