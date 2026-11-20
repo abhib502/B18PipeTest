@@ -22,5 +22,5 @@ jobs:
       - name: Terraform setup
         uses: hashicorp/setup-terraform@v4
 
-      - name: Terraform format
-        run: terraform fmt
+      - name: Terraform Validation
+        run: terraform validate
