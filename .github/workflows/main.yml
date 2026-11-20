@@ -22,5 +22,14 @@ jobs:
       - name: Terraform setup
         uses: hashicorp/setup-terraform@v4
 
+      - name: Check Workspace
+        shell: powershell
+        run: |
+          Write-Host "Current Directory:"
+          Get-Location
+
+          Write-Host "Terraform Files:"
+          Get-ChildItem "${{ github.workspace }}\environment\dev"
+
       - name: Terraform Validation
         run: terraform validate
