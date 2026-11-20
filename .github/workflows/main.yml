@@ -1,0 +1,14 @@
+name: "My first workflow"
+
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+
+jobs:
+  first_job:
+    name: print hello
+    runs-on: [self hosted, x64]
+      shell: powershell
+        echo "Hello World!"
