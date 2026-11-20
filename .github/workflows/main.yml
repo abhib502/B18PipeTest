@@ -15,3 +15,12 @@ jobs:
         shell: powershell
         run: |
           echo "Hello World!"
+          
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Terraform setup
+        uses: hashicorp/setup-terraform@v4
+
+      - name: Terraform format
+        run: terraform fmt
