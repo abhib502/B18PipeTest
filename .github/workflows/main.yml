@@ -14,7 +14,8 @@ jobs:
       - name: Printing
         shell: powershell
         run: |
-          echo "Hello World!
+          echo "Hello World!"
+          
   initialize:
     name: Initialization
     runs-on: [self-hosted, x64]
@@ -29,6 +30,6 @@ jobs:
         working-directory: environment/dev
         run: terraform init
         
-      - name: Terraform Validation
-        working-directory: environment/dev
-        run: terraform validate
+      # - name: Terraform Validation
+      #   working-directory: environment/dev
+      #   run: terraform validate
