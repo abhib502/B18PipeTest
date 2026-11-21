@@ -28,7 +28,9 @@ jobs:
 
       - name: Terraform Initialization
         working-directory: environment/dev
-        run: terraform init
+        run: |
+          Write-Host "Current Directory:"
+          Get-Location
         
       # - name: Terraform Validation
       #   working-directory: environment/dev
