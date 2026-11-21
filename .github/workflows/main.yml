@@ -29,8 +29,9 @@ jobs:
       - name: Terraform Initialization
         working-directory: environment/dev
         run: |
-          Write-Host "Current Directory:"
-          Get-Location
+          Write-Host "Starting Terraform Init..."
+          terraform init -no-color
+          Write-Host "Terraform Exit Code: $LASTEXITCODE"
         
       # - name: Terraform Validation
       #   working-directory: environment/dev
