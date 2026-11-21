@@ -34,3 +34,11 @@ jobs:
       - name: Terraform Validation
         working-directory: environment/dev
         run: terraform validate
+
+      - name: Terraform Plan
+        working-directory: environment/dev
+        run: terraform plan
+
+      - name: Terraform Format
+        working-directory: environment/dev
+        run: terraform fmt
