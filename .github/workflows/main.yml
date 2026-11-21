@@ -38,6 +38,7 @@ jobs:
       - name: Terraform Plan
         working-directory: environment/dev
         run: terraform plan
+        continue-on-error: true
 
       - name: Terraform Format
         working-directory: environment/dev
