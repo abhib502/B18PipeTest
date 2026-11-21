@@ -23,8 +23,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Terraform setup
-        uses: hashicorp/setup-terraform@v4
+      # - name: Terraform setup
+      #   uses: hashicorp/setup-terraform@v4
 
       - name: Terraform Initialization
         working-directory: environment/dev
